@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Média</title>
+</head>
+<body>
+
+<h1>Calculadora de Média - DIW</h1>
+
+<script>
+    let nota1 = prompt("Digite a primeira nota:");
+    let nota2 = prompt("Digite a segunda nota:");
+    let nota3 = prompt("Digite a terceira nota:");
+
+    nota1 = parseFloat(nota1);
+    nota2 = parseFloat(nota2);
+    nota3 = parseFloat(nota3);
+
+    if (!isNaN(nota1) && !isNaN(nota2) && !isNaN(nota3)) {
+        let media = (nota1 + nota2 + nota3) / 3;
+        alert("A média das notas é: " + media);
+    } else {
+        alert("Por favor, insira valores numéricos válidos.");
+    }
+</script>
+
+</body>
+</html>

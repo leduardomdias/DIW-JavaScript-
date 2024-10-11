@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora Básica</title>
+</head>
+<body>
+
+<h1>Calculadora Básica - DIW</h1>
+
+<script>
+  let operacao = prompt("Escolha uma operação: soma, subtração, multiplicação ou divisão");
+
+  let numero1 = prompt("Digite o primeiro número:");
+  let numero2 = prompt("Digite o segundo número:");
+
+  numero1 = parseFloat(numero1);
+  numero2 = parseFloat(numero2);
+
+  if (!isNaN(numero1) && !isNaN(numero2)) {
+    let resultado;
+
+    if (operacao === "soma") {
+      resultado = numero1 + numero2;
+    } else if (operacao === "subtração") {
+      resultado = numero1 - numero2;
+    } else if (operacao === "multiplicação") {
+      resultado = numero1 * numero2;
+    } else if (operacao === "divisão") {
+      if (numero2 !== 0) {
+        resultado = numero1 / numero2;
+      } else {
+        alert("Erro: Divisão por zero não é permitida.");
+      }
+    } else {
+      alert("Operação inválida. Por favor, escolha uma operação válida.");
+    }
+
+    if (resultado !== undefined) {
+      alert("O resultado da operação é: " + resultado);
+    }
+  } else {
+    alert("Por favor, insira valores numéricos válidos.");
+  }
+</script>
+
+</body>
+</html>
